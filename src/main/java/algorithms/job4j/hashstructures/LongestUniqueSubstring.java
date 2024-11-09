@@ -26,9 +26,7 @@ public class LongestUniqueSubstring {
             }
 
             memory.add(curChar);
-
             var subString = str.substring(left, right + 1);
-
             if (result.length() < subString.length()) {
                 result = subString;
             }
@@ -38,13 +36,13 @@ public class LongestUniqueSubstring {
     }
 
     public static void main(String[] args) {
-        String str1 = "abcde"; // abcde
+        String str1 = "abcde";
         System.out.println("Сама длинная подстрока из str = abcde ->" + longestUniqueSubstring(str1));
 
-        String str2 = "abcbcde"; // bcde
+        String str2 = "abcbcde";
         System.out.println("Сама длинная подстрока из str = abcbcde ->" + longestUniqueSubstring(str2));
 
-        String str3 = "aaaaa"; // a
+        String str3 = "aaaaa";
         System.out.println("Сама длинная подстрока из str = aaaaa ->" + longestUniqueSubstring(str3));
     }
 }
