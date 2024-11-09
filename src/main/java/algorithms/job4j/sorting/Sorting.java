@@ -1,4 +1,4 @@
-package algorithms.job4j.Sorting;
+package algorithms.job4j.sorting;
 
 /**
  *

@@ -1,4 +1,4 @@
-package algorithms.job4j.HashStructures;
+package algorithms.job4j.hashstructures;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -45,8 +45,6 @@ public class FindAnagram {
         }
         return result;
     }
-
-
 
     public static void main(String[] args) {
         String s = "cbaebabacd";

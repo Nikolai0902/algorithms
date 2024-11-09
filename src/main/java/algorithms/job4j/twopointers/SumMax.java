@@ -1,4 +1,4 @@
-package algorithms.job4j.TwoPointers;
+package algorithms.job4j.twopointers;
 
 /**
  * Для нахождения непрерывного подмассива в массиве, сумма которого равна заданному числу,
@@ -11,16 +11,12 @@ public class SumMax {
         int[] arr = {2, 3, 6, 7, 9, 10, 11};
         int sum = 19;
 
-        int left = 0; // левый указатель
-        int right = 0; // правый указатель
+        int left = 0;
+        int right = 0;
         int currentSum = 0;
 
         while (right < arr.length) {
-
-            //добавляем элементы
             currentSum += arr[right];
-
-            //убираем элементы
             while (currentSum > sum && left <= right) {
                 currentSum -= arr[left];
                 left++;

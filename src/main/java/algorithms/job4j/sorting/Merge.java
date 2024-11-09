@@ -1,4 +1,4 @@
-package algorithms.job4j.Sorting;
+package algorithms.job4j.sorting;
 
 import java.util.Arrays;
 
@@ -44,7 +44,6 @@ public class Merge {
         }
         return result;
     }
-
 
     public static void main(String[] args) {
         int[] array = {10, 4, 6, 4, 8, -13, 2, 3};

@@ -1,4 +1,4 @@
-package algorithms.job4j.HashStructures;
+package algorithms.job4j.hashstructures;
 
 /**
  * Hash структуры для решения алгоритмов.

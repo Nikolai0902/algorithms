@@ -1,4 +1,4 @@
-package algorithms.job4j.TwoPointers;
+package algorithms.job4j.twopointers;
 
 import java.util.Arrays;
 
