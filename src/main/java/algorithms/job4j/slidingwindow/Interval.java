@@ -75,7 +75,6 @@ class Main {
         return events;
     }
 
-
     public static int[] findMaxOverlapInterval(List<Interval> intervals) {
         List<Event> events = new Main().eventList(intervals);
         int countWindow = 0;
@@ -94,6 +93,38 @@ class Main {
                     end = event.time;
                 }
                 countWindow--;
+            }
+        }
+        return new int[]{start, end};
+    }
+
+    /**
+     * Второй вариант поиска интервала.
+     * Сначала проходим и ищем максимальное чилсло перекрывающихся интервалов и
+     * начала максимального перекрытия.
+     * Далее повторно проходим. end устанавливается только после того,
+     * как найдено максимальное количество перекрытий, и это значение фиксируется только
+     * при нахождении первого события конца после начала максимального перекрытия.
+     */
+    public static int[] findMaxOverlapIntervalVar2(List<Interval> intervals) {
+        List<Event> events = new Main().eventList(intervals);
+        int count = 0;
+        int max = 0;
+        int start = -1;
+        int end = -1;
+        for (Event event : events) {
+            count = event.isStart ? count + 1 : count - 1;
+            if (count > max) {
+                max = count;
+                start = event.time;
+            }
+        }
+        if (start != -1) {
+            for (Event event : events) {
+                if (!event.isStart && start < event.time) {
+                    end = event.time;
+                    break;
+                }
             }
         }
         return new int[]{start, end};

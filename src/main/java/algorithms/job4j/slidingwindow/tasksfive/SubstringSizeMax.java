@@ -1,6 +1,5 @@
-package algorithms.job4j.slidingwindow.tasksFive;
+package algorithms.job4j.slidingwindow.tasksfive;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**

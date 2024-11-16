@@ -15,7 +15,9 @@ package algorithms.job4j.slidingwindow;
 public class SlidingWindow {
 
     public static int maxSum(int[] nums, int k) {
-        if (nums.length < k) return 0;
+        if (nums.length < k) {
+            return 0;
+        }
 
         int maxSum = 0;
         int windowSum = 0;
